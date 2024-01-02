@@ -1,0 +1,123 @@
+@import '../../Tools/Color.scss';
+
+.navbar {
+  align-items: center;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 5%;
+  padding: 1rem;
+  z-index: 3;
+
+  .navbar-hamburger {
+    cursor: pointer;
+    display: none;
+
+    @media (max-width: 1200px) {
+      display: block;
+      width: 30%;
+    }
+
+    .hamburger-icon {
+      display: inline-block;
+      font-size: 40px;
+      transition: transform 0.3s ease;
+
+      &.open {
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  .navbar-buttons {
+    align-items: center;
+    color: $white;
+    display: flex;
+    flex-direction: row;
+    font-size: 1rem;
+    justify-content: space-between;
+    width: 30%;
+
+    div {
+      cursor: pointer;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 1200px) {
+      align-items: center;
+      background-color: $white;
+      border-radius: 5%;
+      color: $deep-blue;
+      display: none;
+      flex-direction: column;
+      height: 18vh;
+      justify-content: space-between;
+      left: 0;
+      padding: 1rem;
+      position: absolute;
+      right: 0;
+      top: 60px;
+      width: 50%;
+      z-index: 2;
+
+      &.show {
+        display: flex;
+      }
+    }
+  }
+
+  .navbar-logo {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+
+    @media (max-width: 1200px) {
+      width: 20%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      width: 20%;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .navbar-profile {
+    display: flex;
+    justify-content: flex-end;
+    width: 30%;
+
+    .navbar-profile-round {
+      align-items: center;
+      background-color: $light-yellow;
+      border-radius: 50%;
+      display: flex;
+      height: 50px;
+      justify-content: center;
+      width: 50px;
+
+      img {
+        height: 20px;
+        padding: 15px;
+        width: 20px;
+      }
+
+      @media (max-width: 1200px) {
+        height: 40px;
+        width: 40px;
+
+        img {
+          height: 15px;
+          width: 15px;
+        }
+      }
+    }
+  }
+}

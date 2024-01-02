@@ -1,0 +1,59 @@
+@import '../../Tools/Color.scss';
+
+.intro-section {
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+
+  h1 {
+    font-size: calc(4em + 1vw);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    max-width: 90%;
+
+    @media (max-width: 1200px) {
+      font-size: calc(2.5rem + 1vw);
+    }
+
+    @media (max-width: 768px) {
+      font-size: calc(2rem + 1vw);
+    }
+
+    @media (max-width: 480px) {
+      font-size: calc(1.5rem + 1vw);
+      text-align: center;
+    }
+  }
+
+  .description-part {
+    margin-bottom: 4%;
+
+    p {
+      font-size: calc(1.25rem + 0.5vw);
+      font-weight: 300;
+      max-width: 80%;
+
+      @media (max-width: 1200px) {
+        font-size: calc(1.75rem + 0.5vw);
+      }
+
+      @media (max-width: 768px) {
+        font-size: calc(1.5rem + 0.5vw);
+      }
+
+      @media (max-width: 480px) {
+        font-size: calc(1.25rem + 0.5vw);
+        max-width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    align-items: center;
+    padding: 4% 5%;
+  }
+}

@@ -1,0 +1,52 @@
+@import '../../Tools/Color.scss';
+
+.icon-scrolling {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    width: 30%;
+
+    p {
+      color: $deep-blue;
+      font-size: 1.25rem;
+      text-transform: uppercase;
+    }
+
+    .mouse {
+      border: 1px solid $deep-blue;
+      border-radius: 60px;
+      height: 90px;
+      position: relative;
+      width: 50px;
+
+      &::before {
+        animation: wheel 2s infinite;
+        background-color: $deep-blue;
+        border-radius: 50%;
+        content: '';
+        height: 12px;
+        left: 50%;
+        opacity: 1;
+        position: absolute;
+        top: 10px;
+        transform: translateX(-50%);
+        -webkit-animation: wheel 2s infinite;
+        width: 12px;
+      }
+    }
+    
+    @keyframes wheel {
+      to {
+        opacity: 0;
+        top: 60px;
+      }
+    }
+
+    @-webkit-keyframes wheel {
+      to {
+        opacity: 0;
+        top: 60px;
+      }
+    }
+}

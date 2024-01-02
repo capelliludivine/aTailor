@@ -1,0 +1,16 @@
+@import '../../Tools/Color.scss';
+
+.banner {
+  align-items: center;
+  background-color: $light-yellow;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  font-size: 14px;
+  justify-content: center;
+  left: 0;
+  padding: 10px 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}

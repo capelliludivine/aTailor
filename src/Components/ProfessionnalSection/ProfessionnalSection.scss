@@ -1,0 +1,37 @@
+@import '../../Tools/Color.scss';
+
+.profesional-section {
+    align-items: center;
+    background-image: url('../../../public/images/pro.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    height: 55vh;
+    padding: 5%;
+    position: relative;
+  
+    &::before {
+      content: '';
+      background: linear-gradient(to top, black, transparent);
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1;
+    }
+
+    .intro-section {
+         .intro-section-button {
+            background-color: transparent;
+            border: 1px solid $white;
+            color: $white;
+
+            &:hover {
+                background-color: $white;
+                color: $deep-blue;
+              }
+        }
+    }
+}

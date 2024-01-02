@@ -1,0 +1,82 @@
+@import '../../Tools/Color.scss';
+
+.avis-section {
+    align-items: center;
+    background-color: $light-yellow;
+    display: flex;
+    height: 55vh;
+    overflow-x: hidden;
+    padding: 4%;
+    position: relative;
+  
+    .background {
+      align-self: center;
+      color: $light-light-yellow;
+      font-size: 18rem;
+      font-weight: 700;
+      justify-self: center;
+      left: 16%;
+      position: absolute;
+      text-transform: uppercase;
+      z-index: 0;
+    }
+  
+    .avis-list {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      justify-content: space-between;
+      padding: 0 10px;
+      width: 100%;
+      z-index: 2;
+  
+      h1,
+      h2 {
+        color: $deep-blue;
+        margin: 0;
+        text-align: center;
+      }
+  
+      h1 {
+        font-size: 1.8rem;
+        font-weight: 500;
+      }
+  
+      h2 {
+        font-size: 2.5rem;
+      }
+    }
+  
+    @media (min-width: 768px) {
+      .background {
+        font-size: 2rem;
+        left: 16%;
+      }
+  
+      .avis-list h1 {
+        font-size: 2.5rem;
+      }
+  
+      .avis-list h2 {
+        font-size: 3.5rem;
+      }
+    }
+  
+    @media (min-width: 1024px) {
+      .background {
+        font-size: 18rem;
+        left: 16%;
+      }
+  
+      .avis-list h1 {
+        font-size: 3rem;
+        width: 48%;
+      }
+  
+      .avis-list h2 {
+        font-size: 4rem;
+      }
+    }
+  }
+  

@@ -1,0 +1,49 @@
+@import '../../Tools/Color.scss';
+
+.home-page {
+  .home-page-home {
+    background-image: url('../../../public/images/Homepage.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(100vh - 50px);
+    margin-top: 50px;
+    max-height: calc(100vh - 50px);
+
+    &::before {
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0)
+      );
+      bottom: 0;
+      content: '';
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1;
+    }
+
+    .navbar {
+      position: relative;
+      z-index: 5;
+    }
+
+    .intro-section {
+      display: flex;
+      gap: 25px;
+      justify-content: center;
+      margin: 5%;
+      width: 60%;
+
+      @media (max-width: 1250px) {
+        width: 80%;
+      }
+    }
+
+    .why-section, .dress-maker-section {
+      width: 100vw;
+    }
+  }
+}

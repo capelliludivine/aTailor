@@ -1,0 +1,154 @@
+@import '../../Tools/Color.scss';
+
+.dress-maker-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 5%;
+
+  .dress-maker-text {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 45%;
+
+    div {
+      color: $deep-blue;
+      font-size: 5rem;
+      margin: 0 0 1rem 0;
+      text-align: center;
+      width: 76%;
+    }
+
+    .button {
+      font-size: 1.5rem;
+    }
+  }
+
+  .dress-maker-scroll {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 55%;
+
+    .scroll-zone {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      height: 86vh;
+      justify-content: space-between;
+      overflow-y: scroll;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      img {
+        height: auto;
+        max-width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    align-items: center;
+    flex-direction: column;
+
+    .dress-maker-text {
+      margin-bottom: 20px;
+      width: 90%;
+
+      div {
+        font-size: 3rem;
+      }
+    }
+
+    .dress-maker-scroll {
+      flex-direction: column;
+      width: 100%;
+
+      .scroll-zone {
+        height: 50vh;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    margin: 4% 2%;
+
+    .dress-maker-text {
+      div {
+        font-size: 2rem;
+      }
+    }
+
+    .dress-maker-scroll {
+      .scroll-zone {
+        height: 60vh;
+      }
+    }
+
+    .icon-scrolling {
+      display: none;
+    }
+  }
+}
+
+.icon-scrolling {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  width: 30%;
+
+  p {
+    color: $deep-blue;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+  }
+
+  .mouse {
+    border: 1px solid $deep-blue;
+    border-radius: 60px;
+    height: 90px;
+    position: relative;
+    width: 50px;
+
+    &::before {
+      animation: wheel 2s infinite;
+      -webkit-animation: wheel 2s infinite;
+      background-color: $deep-blue;
+      border-radius: 50%;
+      content: '';
+      height: 12px;
+      left: 50%;
+      opacity: 1;
+      position: absolute;
+      top: 10px;
+      transform: translateX(-50%);
+      width: 12px;
+    }
+  }
+
+  @keyframes wheel {
+    to {
+      opacity: 0;
+      top: 60px;
+    }
+  }
+
+  @-webkit-keyframes wheel {
+    to {
+      opacity: 0;
+      top: 60px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
